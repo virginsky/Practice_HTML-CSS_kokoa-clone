@@ -1,3 +1,3 @@
 # Kokoa Clone 2021 Update
 
-CSS got so much better by JH
+HTML & CSS are so awesome!
