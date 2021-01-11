@@ -16,15 +16,6 @@
     color:#2e363e;
 }
 .nav__notification{
-    background-color: red;
-    width:25px;
-    height:25px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color:white;
-    font-weight: 600;
     position:absolute;
     left:15px;
     bottom:15px;
@@ -36,5 +27,9 @@
     border-radius: 50%;
     display:flex;
     position:absolute;
-    right:47px;
+    margin-left:30px;
+}
+.findpage_reddot{
+    position:relative;
+    left:85px;
 }
