@@ -9,3 +9,13 @@
     color:white;
     font-weight: 600;
 }
+
+.badge2{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    text-align: center;
+    border:red 1px solid;
+    border-radius: 50%;
+    color:red;
+}

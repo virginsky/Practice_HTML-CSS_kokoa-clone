@@ -26,10 +26,13 @@
     height:5px;
     border-radius: 50%;
     display:flex;
-    position:absolute;
+    position:relative;
     margin-left:30px;
 }
-.findpage_reddot{
-    position:relative;
-    left:85px;
+.upper_reddot{
+    position: absolute;
+    right:23px;
+    top:33px;
+    
+    
 }
