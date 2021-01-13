@@ -99,3 +99,19 @@
 .open-post__heart-count span{
     margin-left:3px;
 }
+
+
+@keyframes heartBeat {
+    0%{
+        color:white;
+    }
+    50%{
+        color:tomato;
+    }
+    100%{
+        color:white;
+    }
+}
+.open-post__heart-count:hover i{
+    animation: heartbeat 1s linear infinite;
+}
