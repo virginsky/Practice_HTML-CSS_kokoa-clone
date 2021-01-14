@@ -8,11 +8,23 @@
     top:10px;
     background-color: skyblue;
 }
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
 .main-chat{
-    margin-top:120px;
+    margin-top:190px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation:fadein 0.8s linear;
 }
 
 #chat-screen .status-bar{
@@ -32,9 +44,21 @@
     margin-right:15px;
     margin-bottom: 25px;
 }
+
+@keyframes fromleft{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
 .message-row{
     display: flex;
     width:100%;
+    animation:fromleft 1s linear;
 }
 .message__author,
 .message__time{
@@ -54,8 +78,22 @@
     display:flex;
     align-items: flex-end;
 }
+
+@keyframes fromright{
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
 .message-row--own{
     justify-content: flex-end;
+    animation:fromright 1s linear forwards;
+    animation-delay: 1s;
+    opacity: 0;
 }
 .message-row--own .message__bubble{
     background-color: yellow;
@@ -79,6 +117,8 @@
     padding:5px 25px;
     box-sizing: border-box;
     align-items: center;
+    transition: all 0.3s ease-in-out;
+    
 }
 .reply .reply__column:first-child{
     width:10%;
@@ -92,6 +132,10 @@
     width:100%;
     border:var(--main-border);
     border-radius:20px;
+    transition: all 0.3s ease-in-out;
+    
+    
+    
 }
 .reply__column:last-child > i,
 .reply__column:last-child button{
@@ -120,3 +164,24 @@
 .reply__column button i{
     opacity: 1;
 }
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button{
+    transition: opacity 0.3s ease-in-out;
+}
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button{
+    opacity: 0;
+}
+
+.reply:focus-within input{
+    width:90vw;
+    transform: translateX(-13%)translateY(-80px);
+}
+
+.reply:focus-within{
+    transform: translateY(80px);
+}
+   
